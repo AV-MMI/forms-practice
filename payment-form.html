@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Payment form</title>
+	<link rel="stylesheet" href="./payment-form.css">
+</head>
+<body>
+	<h1>Payment form - fieldset, legend, section, ul, li, p, select, option</h1>
+
+	<form action="http://httpbin.org/post" method="post">
+		<h2>Payment Form</h2>
+		<p>Required fields are followed by: <span aria-label="required">*</span></p>
+
+		<section>
+			<h3>Contact information</h3>
+			<fieldset>
+				<legend>Title</legend>
+				<ul>
+					<li>
+						<input type="radio" name="title" id="ace" value="ace">
+						<label for="ace">Ace</label>
+					</li>
+					<li>
+						<input type="radio" name="title" id="king" value="king">
+						<label for="king">King</label>
+					</li>
+					<li>
+						<input type="radio" name="title" id="queen" value="queen">
+						<label for="queen">Queen</label>
+					</li>
+				</ul>
+			</fieldset>
+
+			<p>
+				<label for="name">
+					<span>Name: </span>
+					<span aria-label="required">*</span>
+				</label>
+				<input type="text" id="name" name="name" required="true">
+			</p>
+			<p>
+				<label for="email">
+					<span>Email: </span>
+					<span aria-label="required">*</span>
+				</label>
+				<input type="email" id="email" name="email" required="true">
+			</p>
+			<p>
+				<label for="psswd">
+					<span>Password: </span>
+					<span aria-label="required">*</span>
+				</label>
+				<input type="password" id="psswd" name="psswd" required="true">
+			</p>
+		</section>
+		<section>
+			<h2>Payment Information</h2>
+			<p>
+				<label for="card">
+					<span>Card type: </span>
+				</label>
+				<select name="card" id="card">
+					<option value="visa">Visa</option>
+					<option value="mastercard">Mastercard</option>
+					<option value="american-express">American Express</option>
+				</select>
+			</p>
+			<p>
+				<label for="card-num">
+					<span>Card Number: </span>
+					<span aria-label="require">*</span>
+				</label>
+				<input type="tel" name="card-num" id="card-num" required="true">
+			</p>
+			<p>
+				<label for="exp-date">
+					<span>Expiration date</span>
+					<span aria-label="require">*</span>
+				</label>
+				<input type="text" name="exp-date" id="exp-date" required="true" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
+			</p>
+		</section>
+		<section>
+			<p>
+				<button type="submit">Validate the payment</button>
+			</p>
+		</section>
+	</form>
+</body>
+</html>
