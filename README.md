@@ -1,2 +1,3 @@
 # forms-practice
-froms practice from TOP and MDN Articles.
+forms practice from TOP and MDN Articles.
+Also, practice using http://httpbin.org/
